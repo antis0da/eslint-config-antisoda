@@ -8,7 +8,6 @@ import globals from 'globals'
 export function typescript(): Linter.Config[] {
   return [
     js.configs.recommended,
-    eslintPluginPrettierRecommended,
     {
       languageOptions: {
         ecmaVersion: 'latest',
@@ -77,5 +76,6 @@ export function typescript(): Linter.Config[] {
         '@typescript-eslint/unbound-method': 'error',
       },
     },
+    eslintPluginPrettierRecommended,
   ]
 }

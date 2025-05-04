@@ -6,7 +6,6 @@ import globals from 'globals'
 export function javascript(): Linter.Config[] {
   return [
     js.configs.recommended,
-    eslintPluginPrettierRecommended,
     {
       languageOptions: {
         ecmaVersion: 'latest',
@@ -34,5 +33,6 @@ export function javascript(): Linter.Config[] {
         ],
       },
     },
+    eslintPluginPrettierRecommended,
   ]
 }

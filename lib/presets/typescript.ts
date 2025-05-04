@@ -9,16 +9,6 @@ export function typescript(): Linter.Config[] {
   return [
     js.configs.recommended,
     {
-      languageOptions: {
-        ecmaVersion: 'latest',
-        sourceType: 'module',
-        globals: {
-          ...globals.node,
-          ...globals.browser,
-        },
-      },
-    },
-    {
       files: ['**/*.{ts,mts,tsx,mtsx}'],
       ...tseslint.configs.strictTypeChecked,
       ...tseslint.configs.stylisticTypeChecked,
@@ -26,6 +16,12 @@ export function typescript(): Linter.Config[] {
         '@typescript-eslint': tseslint as unknown as ESLint.Plugin,
       },
       languageOptions: {
+        ecmaVersion: 'latest',
+        sourceType: 'module',
+        globals: {
+          ...globals.node,
+          ...globals.browser,
+        },
         parser: tsParser,
         parserOptions: {
           projectService: true,

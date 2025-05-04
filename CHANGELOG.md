@@ -1,5 +1,11 @@
 # @antisoda/eslint-config
 
+## 1.0.3
+
+### Patch Changes
+
+- d031adf: update typescript preset
+
 ## 1.0.2
 
 ### Patch Changes

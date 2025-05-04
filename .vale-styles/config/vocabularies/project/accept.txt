@@ -1,0 +1,4 @@
+(?i)Changesets
+(?i)ESLint
+repos
+(?i)Vitest

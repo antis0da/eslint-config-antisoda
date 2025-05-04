@@ -1,0 +1,7 @@
+.idea
+.fleet
+.vscode
+.vale-styles
+!.vale-styles/config
+dist
+node_modules

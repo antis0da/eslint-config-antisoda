@@ -1,5 +1,11 @@
 # @antisoda/eslint-config
 
+## 1.0.2
+
+### Patch Changes
+
+- 3af6a5c: update exports
+
 ## 1.0.1
 
 ### Patch Changes

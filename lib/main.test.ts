@@ -1,7 +1,21 @@
 import type {Linter} from 'eslint'
 import {ESLint} from 'eslint'
 import {describe, expect, test} from 'vitest'
-import {combine, recommended} from './main.ts'
+import {
+  all,
+  combine,
+  javascript,
+  jest,
+  playwright,
+  react,
+  recommended,
+  recommendedJest,
+  recommendedPlaywright,
+  recommendedReact,
+  recommendedVitest,
+  typescript,
+  vitest,
+} from './main.ts'
 
 describe('combine', () => {
   test('should combine multiple configurations', () => {
@@ -50,5 +64,49 @@ describe('ESLint Configuration Tests', () => {
 
     expect(errorCount).toBeGreaterThan(0)
     expect(messages).toEqual(expect.arrayContaining([expect.objectContaining({ruleId: 'no-undef'})]))
+  })
+})
+
+describe('Recommended Configuration Tests', () => {
+  test('return the recommended TypeScript preset', async () => {
+    const actual = recommended()
+    const expected = combine(javascript(), typescript())
+
+    expect(actual).toStrictEqual(expected)
+  })
+
+  test('return the recommended React preset', async () => {
+    const actual = recommendedReact()
+    const expected = combine(javascript(), typescript(), react())
+
+    expect(actual).toStrictEqual(expected)
+  })
+
+  test('return the recommended Jest preset', async () => {
+    const actual = recommendedJest()
+    const expected = combine(javascript(), typescript(), jest())
+
+    expect(actual).toStrictEqual(expected)
+  })
+
+  test('return the recommended Vitest preset', async () => {
+    const actual = recommendedVitest()
+    const expected = combine(javascript(), typescript(), vitest())
+
+    expect(actual).toStrictEqual(expected)
+  })
+
+  test('return the recommended Playwright preset', async () => {
+    const actual = recommendedPlaywright()
+    const expected = combine(javascript(), typescript(), playwright())
+
+    expect(actual).toStrictEqual(expected)
+  })
+
+  test('return the All preset', async () => {
+    const actual = all()
+    const expected = combine(javascript(), typescript(), react(), vitest(), playwright())
+
+    expect(actual).toStrictEqual(expected)
   })
 })

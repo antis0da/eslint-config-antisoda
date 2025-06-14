@@ -43,38 +43,38 @@
     "version": "changeset version"
   },
   "dependencies": {
-    "@eslint/js": "^9.28.0",
-    "@typescript-eslint/eslint-plugin": "^8.33.1",
-    "@typescript-eslint/parser": "^8.33.1",
+    "@eslint/js": "^9.29.0",
+    "@typescript-eslint/eslint-plugin": "^8.34.0",
+    "@typescript-eslint/parser": "^8.34.0",
     "eslint-config-prettier": "^10.1.5",
-    "eslint-plugin-jest": "^28.13.0",
+    "eslint-plugin-jest": "^28.13.5",
     "eslint-plugin-playwright": "^2.2.0",
     "eslint-plugin-prettier": "^5.4.1",
     "eslint-plugin-react": "^7.37.5",
-    "eslint-plugin-react-hooks": "5.2.0",
+    "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-vitest": "^0.5.4",
     "globals": "^16.2.0"
   },
   "devDependencies": {
     "@antisoda/prettier-config": "^1.2.4",
-    "@arethetypeswrong/cli": "0.18.1",
+    "@arethetypeswrong/cli": "^0.18.2",
     "@changesets/changelog-github": "^0.5.1",
     "@changesets/cli": "^2.29.4",
     "@commitlint/cli": "^19.8.1",
     "@commitlint/config-conventional": "^19.8.1",
-    "@types/node": "^22.15.30",
-    "@vitest/coverage-v8": "^3.2.2",
-    "@vitest/ui": "^3.2.2",
+    "@types/node": "^24.0.1",
+    "@vitest/coverage-v8": "^3.2.3",
+    "@vitest/ui": "^3.2.3",
     "concurrently": "9.1.2",
-    "eslint": "^9.25.1",
-    "jest": "^29.7.0",
+    "eslint": "^9.29.0",
+    "jest": "^30.0.0",
     "lefthook": "^1.11.13",
     "prettier": "^3.5.3",
     "react": "^19.1.0",
     "serve": "^14.2.4",
     "tsup": "^8.5.0",
     "typescript": "^5.8.3",
-    "vitest": "^3.2.2"
+    "vitest": "^3.2.3"
   },
   "peerDependencies": {
     "eslint": ">=8.0.0",
@@ -84,7 +84,7 @@
     "@rollup/rollup-linux-x64-gnu": "*"
   },
   "engines": {
-    "node": ">=16.0.0"
+    "node": ">=20.0.0"
   },
   "publishConfig": {
     "access": "public"

@@ -24,7 +24,6 @@
     "dist"
   ],
   "scripts": {
-    "prebuild": "npm run clean",
     "build": "tsup",
     "check": "concurrently npm:check:* --kill-others-on-fail",
     "check:exports": "attw --pack .",
@@ -34,15 +33,14 @@
     "clean": "git clean dist -X --force",
     "commitlint": "commitlint --edit",
     "format": "prettier . --write",
-    "prepublishOnly": "npm run build",
+    "prepublishOnly": "pnpm build",
     "release": "changeset publish",
     "test": "vitest run",
     "test:coverage": "vitest run --coverage",
     "test:coverage:view": "serve -p 5006 reports/unit/coverage",
     "test:ui": "vitest --ui",
     "test:watch": "vitest",
-    "version": "changeset version",
-    "postversion": "npm i --package-lock-only"
+    "version": "changeset version"
   },
   "dependencies": {
     "@eslint/js": "^9.28.0",

@@ -1,21 +1,21 @@
 commit-msg:
   commands:
     commitlint:
-      run: npx --no-install commitlint --edit
+      run: pnpm dlx commitlint --edit
 pre-commit:
   parallel: true
   commands:
     check:format:
-      run: npm run check:format
+      run: pnpm check:format
     check:types:
-      run: npm run check:types
+      run: pnpm check:types
     check:lint:
-      run: npm run check:lint
+      run: pnpm check:lint
     test:
-      run: npm run test
+      run: pnpm test
 pre-push:
   commands:
     build:
-      run: npm run build
+      run: pnpm build
     check:exports:
-      run: npm run check:exports
+      run: pnpm check:exports

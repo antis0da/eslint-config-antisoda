@@ -1,6 +1,6 @@
 {
   "name": "@antisoda/eslint-config",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Extensible ESLint flat config for TypeScript projects",
   "keywords": [
     "eslint",

@@ -5,29 +5,26 @@ on:
     branches:
       - main
 
-concurrency: ${{ github.workflow }}-${{ github.ref }}
+env:
+  CI: true
 
 jobs:
   release:
     name: Release
+    timeout-minutes: 15
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Repo
+      - name: Checkout code repository
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
 
-      - name: Install pnpm
+      - name: Setup pnpm
         uses: pnpm/action-setup@v4
-        with:
-          version: 10
-          run_install: false
 
-      - name: Setup Node.js 22.x
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 22.x
-          cache: pnpm
+          cache: "pnpm"
 
       - name: Install Dependencies
         run: pnpm install
@@ -39,8 +36,9 @@ jobs:
         id: changesets
         uses: changesets/action@v1
         with:
-          version: pnpm version
-          publish: pnpm release
+          commit: "chore: update versions"
+          title: "chore: update versions"
+          publish: pnpm ci:publish
         env:
           GITHUB_TOKEN: ${{ secrets.CHANGESETS_GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.CHANGESETS_NPM_TOKEN }}

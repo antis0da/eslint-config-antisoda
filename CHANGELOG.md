@@ -1,5 +1,13 @@
 # @antisoda/eslint-config
 
+## 1.0.4
+
+### Patch Changes
+
+- e242b1e: update dependencies
+- 4fe5ba4: replace eslint-plugin-vitest with @vitest/eslint-plugin
+- 8f8ecc8: update CI release workflow
+
 ## 1.0.3
 
 ### Patch Changes

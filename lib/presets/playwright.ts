@@ -4,7 +4,6 @@ import globals from 'globals'
 
 export function playwright(): Linter.Config[] {
   return [
-    // Add Playwright globals
     {
       languageOptions: {
         globals: {
@@ -12,8 +11,6 @@ export function playwright(): Linter.Config[] {
         },
       },
     },
-
-    // Playwright configuration
     {
       files: [
         '**/*.e2e.{js,mjs,ts}',
@@ -29,7 +26,6 @@ export function playwright(): Linter.Config[] {
         playwright: playwrightPlugin,
       },
       rules: {
-        // Playwright rules
         'playwright/expect-expect': 'error',
         'playwright/max-nested-describe': ['error', {max: 3}],
         'playwright/missing-playwright-await': 'error',

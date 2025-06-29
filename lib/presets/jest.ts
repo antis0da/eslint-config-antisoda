@@ -23,7 +23,6 @@ export function jest(): Linter.Config[] {
         jest: jestPlugin,
       },
       rules: {
-        // Jest rules
         'jest/consistent-test-it': ['error', {fn: 'test', withinDescribe: 'test'}],
         'jest/expect-expect': 'error',
         'jest/max-nested-describe': ['error', {max: 3}],

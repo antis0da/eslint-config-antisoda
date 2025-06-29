@@ -1,5 +1,5 @@
 import vitestPlugin from '@vitest/eslint-plugin'
-import type {Linter} from 'eslint'
+import type {ESLint, Linter} from 'eslint'
 import globals from 'globals'
 
 export function vitest(): Linter.Config[] {
@@ -20,7 +20,7 @@ export function vitest(): Linter.Config[] {
         '**/__tests__/**',
       ],
       plugins: {
-        vitest: vitestPlugin,
+        vitest: vitestPlugin as unknown as ESLint.Plugin,
       },
       rules: {
         ...vitestPlugin.configs.recommended.rules,

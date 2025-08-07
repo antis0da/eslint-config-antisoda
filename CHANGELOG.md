@@ -1,5 +1,11 @@
 # @antisoda/eslint-config
 
+## 1.0.5
+
+### Patch Changes
+
+- 779596f: use mise-en-place
+
 ## 1.0.4
 
 ### Patch Changes
